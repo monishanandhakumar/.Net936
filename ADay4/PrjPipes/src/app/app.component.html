@@ -1,0 +1,28 @@
+
+<h2>string manipulation</h2>
+<p>{{title|uppercase}}</p>
+<p>{{title|lowercase}}</p>
+<p>{{title|titlecase}}</p>
+<p>{{title|slice:5:9}}</p>
+
+<h2>Date Pipes</h2>
+
+fulldate:{{todaydate}}<br>
+Shortdate:{{todaydate|date:'shortDate'}}<br>
+Mediumdate:{{todaydate|date:'mediumDate'}}
+
+<hr>
+Product name:<input type="text" [(ngModel)]="searchText">
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let p of products | productfilterpipe:searchText">
+    <td>{{p.id}}</td>
+    <td>{{p.pname}}</td>
+    <td>{{p.price}}</td>
+  </tr>
+</table>
