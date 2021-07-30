@@ -1,0 +1,30 @@
+﻿@model IEnumerable<PrjMvcfirstcoreapp.Models.Department>
+@{
+    ViewData["Title"] = "ListDept";
+}
+
+<h1>ListDept</h1>
+
+@foreach(var item in Model)
+{
+    <li>@item.did</li>
+    <li>@item.dname</li>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Department Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <td>@i.did</td>
+                <td>@i.dname</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
