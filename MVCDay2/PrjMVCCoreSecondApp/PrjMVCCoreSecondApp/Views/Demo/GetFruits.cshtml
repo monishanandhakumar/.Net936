@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "GetFruits";
+   
+}
+
+<h1>GetFruits</h1>
+
+<h2>ViewData</h2>
+@foreach (var fru in ViewData["fruitsname"] as List<string>)
+{
+    <li><b>@fru</b></li>
+}
+
+<hr />
+<h2>viewbag</h2>
+@foreach(var f in ViewBag.fruitname)
+{
+    <li>@f</li>
+}

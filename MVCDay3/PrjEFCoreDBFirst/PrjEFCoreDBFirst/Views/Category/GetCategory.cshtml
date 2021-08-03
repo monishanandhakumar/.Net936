@@ -1,0 +1,13 @@
+﻿@model IEnumerable<PrjEFCoreDBFirst.Models.Category>
+@{
+    ViewData["Title"] = "GetCategory";
+}
+
+<h1>GetCategory</h1>
+
+@foreach (var c in Model)
+{
+    <li>@c.CategoryId</li>
+    <li>@c.CategoryName</li>
+    <li>@c.Description</li>
+}

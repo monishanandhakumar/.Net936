@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "FirstRequest";
+}
+
+<h1>FirstRequest</h1>
+
+@foreach (var r in TempData["Emp"] as List<string>)
+{
+
+    <p><b>@r</b></p>
+
+}

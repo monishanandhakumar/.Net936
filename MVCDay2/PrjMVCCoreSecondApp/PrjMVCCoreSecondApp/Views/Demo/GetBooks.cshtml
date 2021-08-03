@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "GetBooks";
+   
+}
+
+<h1>GetBooks</h1>
+
+@foreach (var b in TempData["Bname"] as List<string>)
+{
+    <li>@b</li>
+}
