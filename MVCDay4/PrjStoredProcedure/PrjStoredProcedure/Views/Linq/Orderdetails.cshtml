@@ -1,0 +1,13 @@
+﻿@model IEnumerable<PrjStoredProcedure.Models.Order>
+@{
+    ViewData["Title"] = "Orderdetails";
+}
+
+<h1>Orderdetails</h1>
+
+@foreach(var i in Model)
+{
+    <li>@i.OrderId</li>
+    <li>@i.CustomerId</li>
+    
+}

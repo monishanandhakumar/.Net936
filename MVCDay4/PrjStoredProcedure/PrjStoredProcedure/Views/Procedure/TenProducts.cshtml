@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PrjStoredProcedure.Models.Ten_Most_Expensive_Products>
+@{
+    ViewData["Title"] = "TenProducts";
+}
+
+<h1>TenProducts</h1>
+
+@foreach(var item in Model)
+{
+    <li>@item.TenMostExpensiveProducts</li>
+    <li>@item.UnitPrice</li>
+}
