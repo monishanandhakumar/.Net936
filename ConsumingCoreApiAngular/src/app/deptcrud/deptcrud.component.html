@@ -1,0 +1,35 @@
+<p>deptcrud works!</p>
+<form>
+<p>
+    Departmentid<input type="number" name="deptid" [(ngModel)]="dept.deptid"/><br><br>
+    DepartmentName<input type="text" name="dname" [(ngModel)]="dept.dname"/><br><br>
+    Location<input type="text" name="location" [(ngModel)]="dept.location"/><br><br>
+    <button class="btn btn-primary" (click)= addDept()>ADD</button> &nbsp;&nbsp;
+    <button class="btn btn-primary" (click)= updateDept(dept)>Update</button>
+</p>
+
+</form>
+
+<br>
+<table class="table">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Location</th>
+    </tr>
+</thead>
+<tbody *ngFor="let d of department">
+    <tr>
+     <td>{{d.deptid}}</td>
+     <td>{{d.dname}}</td>
+     <td>{{d.location}}</td>
+     <td><button class="btn-danger" (click)=removeDept(d.deptid)>Delete</button></td>
+     <td><button class="btn-danger" (click)=getdeptid(d.deptid)>Edit</button></td>
+    </tr>
+</tbody>
+</table>
+
+{{message}}
+
+<h1 class="text-danger">{{errmsg}}</h1>
